@@ -64,7 +64,7 @@ A database-free music discovery app. Search a JioSaavn-compatible catalog, brows
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your-username>/<your-repo>.git
+git clone https://github.com/<vivaank21>/<spotify>.git
 cd <your-repo>
 
 # 2. Install dependencies for both workspaces
