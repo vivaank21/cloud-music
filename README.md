@@ -1,174 +1,319 @@
 # 🎧 Cloud Music
 
-A database-free music discovery app. Search a JioSaavn-compatible catalog, browse by genre, and play official track previews through a shared player, all backed by a small Express API that acts as a server-side proxy.
+### Discover. Explore. Feel the Music.
 
-![Node](https://img.shields.io/badge/Node.js-20%2B-339933?logo=node.js&logoColor=white)
-![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)
-![Express](https://img.shields.io/badge/Express-4-000000?logo=express&logoColor=white)
+**Your music discovery space.** Explore trending tracks, search your favourite songs, browse different genres, and discover music from around the world — all in one place.
+
+\<p align="center">
+&#x20; \<img src="[https://img.shields.io/badge/Status-Active-success?style=for-the-badge](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)" />
+&#x20; \<img src="[https://img.shields.io/badge/Music-Discovery-8B5CF6?style=for-the-badge](https://img.shields.io/badge/Music-Discovery-8B5CF6?style=for-the-badge)" />
+&#x20; \<img src="[https://img.shields.io/badge/Playback-Preview%20Only-EC4899?style=for-the-badge](https://img.shields.io/badge/Playback-Preview%20Only-EC4899?style=for-the-badge)" />
+\</p>
+
+\<p align="center">
+&#x20; \<img src="[https://img.shields.io/badge/Node.js-20%2B-339933?style=flat-square&logo=node.js&logoColor=white](https://img.shields.io/badge/Node.js-20%2B-339933?style=flat-square\&logo=node.js\&logoColor=white)" />
+&#x20; \<img src="[https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black](https://img.shields.io/badge/React-19-61DAFB?style=flat-square\&logo=react\&logoColor=black)" />
+&#x20; \<img src="[https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square\&logo=typescript\&logoColor=white)" />
+&#x20; \<img src="[https://img.shields.io/badge/Vite-6-646CFF?style=flat-square&logo=vite&logoColor=white](https://img.shields.io/badge/Vite-6-646CFF?style=flat-square\&logo=vite\&logoColor=white)" />
+&#x20; \<img src="[https://img.shields.io/badge/Express-4-000000?style=flat-square&logo=express&logoColor=white](https://img.shields.io/badge/Express-4-000000?style=flat-square\&logo=express\&logoColor=white)" />
+\</p>
 
 ---
 
-## ✨ Features
+## ✨ Experience Cloud Music
 
-- **Catalog search**: find songs by title, artist, or album
-- **Home feed**: "Popular right now" tracks and a hero banner driven by track artwork
-- **Browse by genre**: Electronic, Hip-Hop, Bollywood, Gujarati, Punjabi, Classical, Lo-Fi, Pop
-- **Shared player**: play/pause, seek bar, and volume control that persist across pages
-- **Preview playback**: plays only the previews exposed by the catalog API; full releases open at the provider
-- **Secure API layer**: Helmet, CORS allow-list, rate limiting, and Zod input validation
-- **No database, no accounts**: nothing to migrate or configure
+Cloud Music brings music discovery into one immersive experience. Whether you're looking for your favourite Bollywood songs, exploring Gujarati music, or discovering something completely new, there's always something to explore.
 
-## 🧱 Tech Stack
+### 🌟 What You Can Do
 
-| Layer    | Technology                                                        |
-| -------- | ----------------------------------------------------------------- |
-| Frontend | React 19, TypeScript, Vite, React Router 7, Tailwind CSS, Lucide  |
-| Backend  | Node.js, Express 4, TypeScript, Zod, Helmet, Morgan, express-rate-limit |
-| Tooling  | npm workspaces (monorepo), `concurrently`, `tsx`                  |
+| Feature               | Description                                                                          |
+| --------------------- | ------------------------------------------------------------------------------------ |
+| 🔍 Smart Search       | Find songs by title, artist, or album.                                               |
+| 🔥 Trending Music     | Explore popular tracks and discover what's trending.                                 |
+| 🎼 Genre Explorer     | Browse Bollywood, Gujarati, Punjabi, Hip-Hop, Electronic, Classical, Lo-Fi, and Pop. |
+| 🎧 Music Player       | Enjoy a shared player with playback, seeking, and volume controls.                   |
+| 🎨 Track Artwork      | Discover music through its album artwork and visual presentation.                    |
+| ▶️ Preview Playback   | Listen to available official track previews.                                         |
+| 🌐 External Listening | Open full releases through the original music provider.                              |
 
-## 📁 Project Structure
+### 🎵 Music Discovery, Made Simple
+
+- No account registration required.
+- No complicated setup for listeners.
+- No personal music library required.
+- No database dependency.
+- Discover music from a JioSaavn-compatible catalog.
+
+---
+
+## 🖥️ Explore the Experience
+
+Cloud Music is designed around a modern music discovery experience:
+
+- **Home:** A curated landing experience featuring popular music.
+- **Discover:** Explore music across different genres.
+- **Search:** Find tracks, artists, and albums.
+- **Player:** Enjoy a consistent playback experience while navigating the application.
+
+---
+
+## 🧱 Under the Hood
+
+| Layer              | Technology                       |
+| ------------------ | -------------------------------- |
+| Frontend           | React 19, TypeScript, Vite       |
+| Navigation         | React Router 7                   |
+| Styling            | Tailwind CSS                     |
+| Icons              | Lucide                           |
+| Backend            | Node.js, Express 4               |
+| Validation         | Zod                              |
+| Security           | Helmet, CORS, express-rate-limit |
+| Logging            | Morgan                           |
+| Package Management | npm Workspaces                   |
+
+---
+
+## 📂 Project Structure
 
 ```text
-.
-├── frontend/                 # React + Vite client
+Cloud-Music/
+│
+├── frontend/
 │   └── src/
-│       ├── pages/            # HomePage, DiscoverPage, SearchPage
+│       ├── pages/
+│       │   ├── HomePage
+│       │   ├── DiscoverPage
+│       │   └── SearchPage
+│       │
 │       ├── components/
-│       │   ├── layout/       # App shell: sidebar, search bar, player bar
-│       │   └── music/        # PlayerContext, TrackCard, MusicPreloader
-│       ├── services/         # API client (music.ts)
+│       │   ├── layout/
+│       │   └── music/
+│       │
+│       ├── services/
 │       └── styles/
-├── backend/                  # Express API
+│
+├── backend/
 │   └── src/
-│       ├── config/           # Environment loading
-│       ├── controllers/      # Route handlers
-│       ├── middleware/       # Error handling, async wrapper
-│       ├── routes/           # /api/music routes
-│       ├── services/music/   # Catalog provider + track normalization
-│       ├── types/ & utils/
-│       ├── app.ts            # Middleware + route mounting
-│       └── server.ts         # Entry point
-├── .env.example              # Environment template
-└── package.json              # Workspace root
+│       ├── config/
+│       ├── controllers/
+│       ├── middleware/
+│       ├── routes/
+│       ├── services/
+│       ├── types/
+│       ├── utils/
+│       ├── app.ts
+│       └── server.ts
+│
+├── .env.example
+├── .gitignore
+└── package.json
 ```
 
-## 🚀 Getting Started
+---
 
-### Prerequisites
+## 🚀 Run Cloud Music Locally
 
-- **Node.js 20+** and **npm 10+**
+### Requirements
 
-### Installation
+- Node.js 20 or newer
+- npm 10 or newer
+- Git
+
+### 1. Clone the Repository
 
 ```bash
-# 1. Clone the repository
 git clone https://github.com/vivaank21/spotify.git
+```
+
+```bash
 cd spotify
+```
 
-# 2. Install dependencies for both workspaces
+### 2. Install Dependencies
+
+```bash
 npm install
+```
 
-# 3. Create your environment file
-cp .env.example .env          # Windows PowerShell: Copy-Item .env.example .env
+### 3. Configure Environment Variables
 
-# 4. Start the frontend and backend together
+Create a `.env` file in the project root.
+
+```env
+VITE_API_BASE_URL=http://localhost:4000/api
+VITE_APP_NAME=Cloud Music
+
+PORT=4000
+NODE_ENV=development
+
+CORS_ORIGIN=http://localhost:5173
+
+MUSIC_API_BASE_URL=https://saavnapi-nine.vercel.app
+```
+
+### 4. Start the Application
+
+```bash
 npm run dev
 ```
 
-| Service  | URL                     |
-| -------- | ----------------------- |
-| Frontend | http://localhost:5173   |
-| API      | http://localhost:4000   |
+### 5. Open Cloud Music
 
-## ⚙️ Environment Variables
+| Service         | Local URL                                                            |
+| --------------- | -------------------------------------------------------------------- |
+| 🎧 Frontend     | [http://localhost:5173](http://localhost:5173)                       |
+| ⚙️ Backend      | [http://localhost:4000](http://localhost:4000)                       |
+| ❤️ Health Check | [http://localhost:4000/api/health](http://localhost:4000/api/health) |
 
-All variables live in a single `.env` file at the repository root and are shared by both workspaces.
+---
 
-| Variable             | Default                              | Description                                         |
-| -------------------- | ------------------------------------ | --------------------------------------------------- |
-| `VITE_API_BASE_URL`  | `http://localhost:4000/api`          | API URL used by the frontend                        |
-| `VITE_APP_NAME`      | `Cloud Music`                        | App display name                                    |
-| `PORT`               | `4000`                               | Backend port                                        |
-| `NODE_ENV`           | `development`                        | Runtime environment                                 |
-| `CORS_ORIGIN`        | `http://localhost:5173`              | Allowed origin(s); separate multiple with commas    |
-| `MUSIC_API_BASE_URL` | `https://saavnapi-nine.vercel.app`   | JioSaavn-compatible catalog API the backend proxies |
+## ⚙️ Environment Configuration
 
-> ⚠️ Never commit your real `.env`. It is already listed in `.gitignore`; only `.env.example` should be tracked.
+| Variable             | Default                            | Purpose                 |
+| -------------------- | ---------------------------------- | ----------------------- |
+| `VITE_API_BASE_URL`  | `http://localhost:4000/api`        | Backend API address     |
+| `VITE_APP_NAME`      | `Cloud Music`                      | Application name        |
+| `PORT`               | `4000`                             | Backend server port     |
+| `NODE_ENV`           | `development`                      | Runtime environment     |
+| `CORS_ORIGIN`        | `http://localhost:5173`            | Allowed frontend origin |
+| `MUSIC_API_BASE_URL` | `https://saavnapi-nine.vercel.app` | Music catalog provider  |
 
-## 📜 Scripts
+> 🔐 **Security Reminder:** Never commit your real `.env` file. Keep sensitive configuration out of your public repository.
 
-Run from the repository root:
-
-| Command         | What it does                                      |
-| --------------- | ------------------------------------------------- |
-| `npm run dev`   | Runs the frontend (Vite) and backend (tsx watch)  |
-| `npm run build` | Type-checks and builds the frontend, then the backend |
-
-Run a single workspace with `--workspace`:
-
-```bash
-npm run dev --workspace frontend
-npm run dev --workspace backend
-npm run start --workspace backend      # run the compiled API (after build)
-npm run preview --workspace frontend   # preview the production frontend build
-```
+---
 
 ## 🔌 API Reference
 
-Base URL: `http://localhost:4000/api`
+The Express backend acts as a server-side proxy between Cloud Music and the external music catalog provider.
 
-| Method | Endpoint                   | Description                          |
-| ------ | -------------------------- | ------------------------------------ |
-| `GET`  | `/health`                  | Service health check                 |
-| `GET`  | `/music/search?q=<query>`  | Search tracks (`q` required, max 120 characters) |
-| `GET`  | `/music/trending`          | Popular tracks                       |
-| `GET`  | `/music/recommendations`   | New-music recommendations            |
+**Base URL**
 
-**Response envelope**
+```text
+http://localhost:4000/api
+```
+
+| Method | Endpoint                     | Description                                |
+| ------ | ---------------------------- | ------------------------------------------ |
+| GET    | `/health`                    | Not used; see actual health endpoint below |
+| GET    | `/api/health`                | Backend health check                       |
+| GET    | `/api/music/search?q=query`  | Search music                               |
+| GET    | `/api/music/trending`        | Retrieve trending tracks                   |
+| GET    | `/api/music/recommendations` | Discover recommended music                 |
+
+The paths above are relative to the backend host. For example, the health endpoint is:
+
+```text
+GET /api/health
+```
+
+### Example Response
 
 ```json
 {
   "success": true,
   "data": {
-    "tracks": [
-      {
-        "id": "jiosaavn-abc123",
-        "provider": "jiosaavn",
-        "title": "Song title",
-        "artist": "Artist name",
-        "album": "Album name",
-        "artwork": "https://…",
-        "duration": 215,
-        "previewUrl": "https://…",
-        "isPlayable": true,
-        "availabilityType": "preview"
-      }
-    ]
+    "status": "ok",
+    "service": "cloud-music-backend"
   }
 }
 ```
 
-Errors return `{ "success": false, "error": "…" }` with an appropriate status code. The API is rate limited to 200 requests per 15 minutes per client.
+### Track Data
 
-## ⚠️ Notes
+Music results are normalized into a consistent structure:
 
-- Cloud Music plays **previews only**. There is no download feature and no full-track streaming.
-- Track data comes from a third-party, JioSaavn-compatible API. Availability and uptime depend on that service, so point `MUSIC_API_BASE_URL` to your own compatible endpoint for production use.
-- This project is for learning and demonstration. Check the catalog provider's terms before deploying it publicly.
+```json
+{
+  "id": "jiosaavn-abc123",
+  "provider": "jiosaavn",
+  "title": "Song Title",
+  "artist": "Artist Name",
+  "album": "Album Name",
+  "artwork": "https://example.com/artwork.jpg",
+  "duration": 215,
+  "previewUrl": "https://example.com/preview",
+  "isPlayable": true,
+  "availabilityType": "preview"
+}
+```
 
-## 🗺️ Roadmap
+---
 
-- [ ] Artist and album detail pages
-- [ ] Queue, next/previous, shuffle, and repeat controls
-- [ ] Response caching for the catalog proxy
-- [ ] Docker setup and CI workflow
+## 🛡️ Security & Reliability
+
+Cloud Music includes several backend protections:
+
+- **Helmet:** Adds security-related HTTP headers.
+- **CORS:** Restricts browser access to configured frontend origins.
+- **Rate Limiting:** Limits API requests to 200 per 15 minutes per client.
+- **Zod Validation:** Validates incoming request data.
+- **Error Handling:** Provides consistent API error responses.
+
+---
+
+## ☁️ Deployment
+
+Cloud Music uses separate hosting for its frontend and backend.
+
+| Component     | Hosting                          |
+| ------------- | -------------------------------- |
+| Frontend      | Vercel                           |
+| Backend API   | Render                           |
+| Music Catalog | JioSaavn-compatible external API |
+
+The frontend connects to the backend through `VITE_API_BASE_URL`.
+
+The backend communicates with the external catalog provider through `MUSIC_API_BASE_URL`.
+
+---
+
+## ⚠️ Important Information
+
+- Cloud Music currently supports **preview playback only**.
+- Full-track streaming and music downloads are not provided.
+- Track availability depends on the third-party catalog provider.
+- External provider availability and uptime are not guaranteed.
+- This project is intended for learning and demonstration purposes. Follow the catalog provider's terms and applicable music licensing requirements.
+
+---
+
+## 🗺️ Future Improvements
+
+- [ ] Artist profile pages
+- [ ] Album detail pages
+- [ ] Music queue management
+- [ ] Next and previous track controls
+- [ ] Shuffle and repeat playback
+- [ ] Improved music recommendations
+- [ ] Catalog response caching
+- [ ] Docker support
+- [ ] Automated CI/CD workflow
+
+---
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome. Fork the repo, create a feature branch, and open a pull request.
+Have an idea to improve Cloud Music?
 
-## 👤 Author
+Contributions, bug reports, and feature requests are welcome.
 
-**Vishu**: [GitHub](https://github.com/<vivaank21>)
+1. Fork the repository.
+2. Create a new feature branch.
+3. Make your changes.
+4. Submit a pull request.
+
+---
+
+## 👨‍💻 Author
+
+**Vishu**
+
+GitHub: [@vivaank21](https://github.com/vivaank21)
+
+---
+
+\<p align="center">
+&#x20; \<strong>🎧 Made for music lovers.\</strong>
+&#x20; \<br />
+&#x20; Discover something new. Every day.
+\</p>
